@@ -53,7 +53,7 @@ app.controller('gameController', function($scope, $timeout) {
             blocks.push(newBlock(i));
         }
 
-        // shuffle(blocks)
+        shuffle(blocks)
 
     };
 
