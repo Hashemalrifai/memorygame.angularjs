@@ -1,6 +1,6 @@
 app.controller('gameController', function($scope, $timeout) {
 
-    $scope.blocksNum = 4;
+    $scope.blocksNum = 16;
     $scope.rowCount = Math.sqrt($scope.blocksNum);
     $scope.blocks = [];
     $scope.selectedBlocks = [];
