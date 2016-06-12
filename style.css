@@ -1,0 +1,48 @@
+.box{
+    position: relative;
+}
+
+.box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+img {
+    width: 100%;
+    margin-top: -100%;
+}
+
+.block {
+    padding: 5px;
+}
+
+#result-div {
+    text-align: center;
+    height: 200px;
+}
+
+#result-div.ng-hide-add, #result-div.ng-hide-remove {
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+#result-div.ng-hide-add {
+    height: 200px;
+    opacity: 1;
+}
+
+#result-div.ng-hide-add.ng-hide-add-active {
+    height: 0px;
+    opacity: 0;
+}
+
+#result-div.ng-hide-remove {
+    height: 0px;
+    opacity: 0;
+}
+#result-div.ng-hide-remove.ng-hide-remove-active {
+    height: 200px;
+    opacity: 1;
+}

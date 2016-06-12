@@ -1,0 +1,30 @@
+<div class='game-container col-sm-6 col-sm-offset-3 col-xs-12'>
+
+    <div class='row game-canvas'>
+        <div id='result-div' ng-show='gameFinished()' class="ng-hide">
+            <h1>You did it!</h1>
+            <div class='row'>
+                <div class='col-xs-4 col-xs-offset-4'>
+                    <table class='table'>
+                        <tr>
+                            <th>Correct steps</th>
+                            <td ng-bind='correct'></td>
+                        </tr>
+                        <tr>
+                            <th>Wrong steps</th>
+                            <td ng-bind='wrong'></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button class='btn btn-success' ng-click='restart()'>Play again</button>
+        </div>	
+        <div ng-repeat="b in blocks" class='col-xs-{{12/rowCount}} block'>
+            <button class='col-xs-12 btn box' ng-class="{'btn-danger': b.selected, 'btn-primary':!b.selected, 'btn-success': b.solved }" ng-click='select(b)' ng-disabled='b.selected || b.solved'>
+                <img ng-show='b.selected || b.solved' class='img' src='assets/0{{b.value+1}}.png' />
+            </button>
+        </div>
+    </div>
+
+    
+</div>
